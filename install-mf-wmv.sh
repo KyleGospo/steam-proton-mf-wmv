@@ -1,4 +1,4 @@
-#!/bin/sh -x
+#!/usr/bin/bash -x
 set -e
 
 [ -z "$WINEPREFIX" ] && echo "WINEPREFIX not set" && exit 1
