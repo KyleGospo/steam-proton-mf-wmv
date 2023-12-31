@@ -18,15 +18,15 @@ if [ ! -f "Windows6.1-KB968211-x64-RefreshPkg.msu" ]; then
     wget "http://download.microsoft.com/download/B/9/B/B9BED058-8669-490E-BA61-D502E4E8BEB1/Windows6.1-KB968211-x64-RefreshPkg.msu"
 fi
 
-python3 installcab.py windows6.1-KB976932-X64.exe mediafoundation
-python3 installcab.py windows6.1-KB976932-X64.exe mf_
-python3 installcab.py windows6.1-KB976932-X64.exe mfreadwrite
-python3 installcab.py windows6.1-KB976932-X64.exe wmadmod
-python3 installcab.py windows6.1-KB976932-X64.exe wmvdecod
-python3 installcab.py windows6.1-KB976932-X64.exe wmadmod
+/usr/bin/installcab windows6.1-KB976932-X64.exe mediafoundation
+/usr/bin/installcab windows6.1-KB976932-X64.exe mf_
+/usr/bin/installcab windows6.1-KB976932-X64.exe mfreadwrite
+/usr/bin/installcab windows6.1-KB976932-X64.exe wmadmod
+/usr/bin/installcab windows6.1-KB976932-X64.exe wmvdecod
+/usr/bin/installcab windows6.1-KB976932-X64.exe wmadmod
 
 cabextract Windows6.1-KB968211-x64-RefreshPkg.msu
-python3 installcab.py Windows6.1-KB968211-x64-RefreshPkg.cab mfplat
+/usr/bin/installcab Windows6.1-KB968211-x64-RefreshPkg.cab mfplat
 
 rm -f Windows6.1-KB968211-x64-RefreshPkg.cab \
       Windows6.1-KB968211-x64-RefreshPkg.xml \
